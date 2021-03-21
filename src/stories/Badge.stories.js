@@ -33,6 +33,8 @@ export const Primary = Template.bind({});
 Primary.args = {
     text: "Badge",
     color: "gray",
+    isRemovable: true,
+    isSmall: true,
     onRemove: () => {}
 };
 
