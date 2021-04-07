@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 
-
-
-
-
 /**
  * Functional Component to display Tailwind Dropdown
- * @param {string} label - text label to display 
- * @param {array} values - 
+ * @param {string} label - text label to display
+ * @param {array} values - array of objects with value and name attributes.
  */
-const Dropdown = ({ label, values}) => {
+const Dropdown = ({ label, values }) => {
   const [selected, setSelected] = useState();
   const labelID = label.toLowerCase().replace(" ", "_") + "-label";
 
   const handleSelect = (event) => {
     setSelected(event.target.value);
-  }
+  };
   return (
     <>
       <label id={labelID} className="block text-sm font-medium text-gray-700">
@@ -27,11 +23,12 @@ const Dropdown = ({ label, values}) => {
           aria-expanded="true"
           onChange={handleSelect}
         >
-          <option value="" >--Please choose an option--</option>
-        {values.map((item) =>
-          <option value={item.value} key={item.value}>{item.name}</option>
-        )}
-          
+          <option value="">--Please choose an option--</option>
+          {values.map((item) => (
+            <option value={item.value} key={item.value}>
+              {item.name}
+            </option>
+          ))}
         </select>
       </div>
     </>
