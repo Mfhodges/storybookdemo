@@ -1,13 +1,20 @@
 import React from "react";
+import { ReactComponent as RemoveIcon } from "../assests/icons/remove.svg";
 
 /**
  * Functional Component to display Tailwind Badge
  * @param {string} text - text label to display in the badge
  * @param {string} color - color family used to define the tailwind css classes
  */
-const Badge = ({ text, color, onRemove, isRemovable = false, isSmall=true }) => {
+const Badge = ({
+  text,
+  color,
+  onRemove,
+  isRemovable = false,
+  isSmall = true,
+}) => {
   const badgePadding = isRemovable ? "px-2" : "px-3";
-  const textStyling = isSmall ? 'text-xs' : 'text-sm';
+  const textStyling = isSmall ? "text-xs" : "text-sm";
   return (
     <button
       href="#"
@@ -19,8 +26,9 @@ const Badge = ({ text, color, onRemove, isRemovable = false, isSmall=true }) => 
           onClick={onRemove}
           className={`inline-flex items-center align-middle justify-center w-4 h-4 ml-1 rounded-full text-${color}-400 hover:bg-${color}-200 hover:text-${color}-500`}
         >
+          {/*this should be an svg imported as an Icon but it's causing an issue with storybook*/}
           <svg
-            className="w-2.5 h-2.5 fill-current"
+            className="w-3 h-3 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
