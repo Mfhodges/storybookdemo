@@ -6,7 +6,7 @@ import Badge from './components/Badge';
 
 const App = () => {
 
-return(<><h1> Hellow world</h1>
+return(<>
     <Badge text="hello" color="gray" onRemove={()=>{}} />
     </>)};
 
