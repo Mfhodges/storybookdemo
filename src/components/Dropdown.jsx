@@ -5,7 +5,7 @@ import React, { useState } from "react";
  * @param {string} label - text label to display
  * @param {array} values - array of objects with value and name attributes.
  */
-const Dropdown = ({ label, values }) => {
+const Dropdown = ({ label, values,placeholder="" }) => {
   const [selected, setSelected] = useState();
   const labelID = label.toLowerCase().replace(" ", "_") + "-label";
 
@@ -23,7 +23,7 @@ const Dropdown = ({ label, values }) => {
           aria-expanded="true"
           onChange={handleSelect}
         >
-          <option value="">--Please choose an option--</option>
+          <option value="" selected hidden>{placeholder}</option>
           {values.map((item) => (
             <option value={item.value} key={item.value}>
               {item.name}

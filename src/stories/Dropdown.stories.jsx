@@ -22,5 +22,6 @@ export const Primary = Template.bind({});
 Primary.args = {
     label: "label here",
     values: dropdownValues,
+    placeholder: "select an animal"
 };
 

@@ -21,7 +21,7 @@ const App = () => {
         <h2 className="my-5"> Badge</h2>
         <Badge text="hello" color="gray" onRemove={() => {}} />
         <h2 className="my-5">Dropdown</h2>
-        <Dropdown label="Here's a Label" values={dropdownValues} />
+        <Dropdown label="Here's a Label" values={dropdownValues} placeholder="--select an option--" />
       </Layout>
     </>
   );
