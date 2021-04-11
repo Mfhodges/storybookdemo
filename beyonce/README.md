@@ -1,9 +1,6 @@
-# Beyonce
-Design system for Relay
-
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and configured with Tailwind and Storybook as outlined in [this article](https://medium.com/storybookjs/building-a-front-end-project-with-react-tailwindcss-and-storybook-742bdb1417da)
 
 ## Available Scripts
 
