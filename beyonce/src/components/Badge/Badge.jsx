@@ -1,7 +1,5 @@
 import React from 'react';
-//import { ReactComponent as RemoveIcon } from '../assests/icons/remove.svg';
-
-// <RemoveIcon />
+import { ReactComponent as RemoveIcon } from '../../assests/remove.svg';
 
 /**
  * Functional Component to display Tailwind Badge
@@ -15,19 +13,23 @@ const Badge = ({
   isRemovable = false,
   isSmall = true,
 }) => {
+  const badgePadding = isRemovable ? 'px-2' : 'px-3';
+  const textStyling = isSmall ? 'text-xs' : 'text-sm';
   return (
-    <span
-      className={`bg-${color}-100 text-${color}-800 inline-flex text-xs leading-5 font-semibold rounded-full $px-2`}
-    >{text}
+    <button
+      href="#"
+      className={`bg-${color}-100 text-${color}-800 inline-block rounded-full font-medium text-xs ${badgePadding} py-1`}
+    >
+      <span className={`align-middle ${textStyling}`}>{text}</span>
       {isRemovable && (
         <span
           onClick={onRemove}
-          className={`inline-flex cursor-pointer items-center align-middle justify-center w-4 min-h-full ml-1 my-0.5 rounded-full text-${color}-400 hover:bg-${color}-200 hover:text-${color}-500`}
+          className={`inline-flex cursor-pointer items-center align-middle justify-center w-4 h-4 ml-1 rounded-full text-${color}-400 hover:bg-${color}-200 hover:text-${color}-500`}
         >
-         x
+          <RemoveIcon />
         </span>
       )}
-    </span>
+    </button>
   );
 };
 

@@ -25,15 +25,25 @@ export default {
   },
 };
 
-const Template = ({color, ...args}) => {
+const Template = ({color,...args}) => {
 const selectedColor = color;
+
 return <Badge color={selectedColor} {...args} />};
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Small = Template.bind({});
+Small.args = {
     text: "Badge",
     color: "gray",
     isRemovable: true,
     isSmall: true,
+    onRemove: () => {}
+};
+
+export const Large = Template.bind({});
+Large.args = {
+    text: "Badge",
+    color: "gray",
+    isRemovable: true,
+    isSmall: false,
     onRemove: () => {}
 };
