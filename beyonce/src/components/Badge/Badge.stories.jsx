@@ -13,7 +13,7 @@ const colorsTailwind = [
     "yellow"
   ];
 export default {
-  title: 'Example/Badge',
+  title: 'Design System/Atoms/Badge',
   component: Badge,
   argTypes: {
     color: {

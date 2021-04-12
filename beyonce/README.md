@@ -3,25 +3,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and configured with Tailwind and Storybook as outlined in [this article](https://medium.com/storybookjs/building-a-front-end-project-with-react-tailwindcss-and-storybook-742bdb1417da)
 
 
-
-###  `beyonce/ $npm run storybook`
-Runs storybook
-
+**🚨 NOTE 🚨**  
+There were some issues getting Storybook, Tailwind, and CRA to play nicely together. I was able to resolve the webpack/versioning issues with the steps outlined in [this doc](https://www.notion.so/maddyhodges/Storybook-issues-15ddb1ccc81444daac6472e79f2e2dc3)
 
 
-`npx sb upgrade --prerelease` from https://github.com/storybookjs/storybook/issues/12668#issuecomment-773958085
-
-`npm run storybook` then works but still no tailwind.
-
-
-
+### Exploring Components in Storybook
+Please refer to this brief [storybook user tutorial](https://www.notion.so/maddyhodges/Storybook-Tutorial-74c8b6b907b147c0994bac1ad79094d9)
 
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm run storybook`
+Runs the Storybook component explorer.  
+Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
+
+The page will reload if you make edits.
+
+
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -29,12 +30,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `npm build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -44,7 +45,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `npm eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
