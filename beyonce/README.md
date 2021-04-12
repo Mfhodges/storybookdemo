@@ -2,6 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and configured with Tailwind and Storybook as outlined in [this article](https://medium.com/storybookjs/building-a-front-end-project-with-react-tailwindcss-and-storybook-742bdb1417da)
 
+
+
+###  `beyonce/ $npm run storybook`
+Runs storybook
+
+
+
+`npx sb upgrade --prerelease` from https://github.com/storybookjs/storybook/issues/12668#issuecomment-773958085
+
+`npm run storybook` then works but still no tailwind.
+
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
