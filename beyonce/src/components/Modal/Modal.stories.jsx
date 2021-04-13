@@ -18,3 +18,10 @@ Primary.args = {
     description: 'wow I am having so much fun!', 
     buttonText:'Sign up', 
 };
+
+// Example of modal over content
+{/* <Layout>
+<h1>hello world!</h1>
+<Modal></Modal>
+</Layout> */}
+

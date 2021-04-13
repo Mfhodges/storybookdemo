@@ -6,16 +6,17 @@ export default {
   component: Button,
 };
 
-const Template = ({...args}) => {
-return <Button {...args} />};
+const Template = ({text, ...args}) => {
+return <Button {...args} >{text}</Button>};
 
 export const Primary = Template.bind({});
 Primary.args = {
     text: "Daily Notifications",
+    isFullWidth: false,
 };
 
 export const FullWidth = Template.bind({});
 FullWidth.args = {
     text: "Daily Notifications",
-    isFullWidth:true,
+    isFullWidth: true,
 };
