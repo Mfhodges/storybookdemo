@@ -1,16 +1,16 @@
 
 
 import React from 'react';
-import Modal from './Modal';
+import SuccessModal from './SuccessModal';
 
 export default {
-  title: 'Design System/Templates/Modal',
-  component: Modal,
+  title: 'Design System/Templates/SuccessModal',
+  component: SuccessModal,
 };
 
 const Template = ({description,...args}) => {
 const onAction = () => {console.log("I clicked the modal button!")}
-return <Modal handleAction={onAction} {...args} >{description}</Modal>};
+return <SuccessModal handleAction={onAction} {...args} >{description}</SuccessModal>};
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -18,10 +18,3 @@ Primary.args = {
     description: 'wow I am having so much fun!', 
     buttonText:'Sign up', 
 };
-
-// Example of modal over content
-{/* <Layout>
-<h1>hello world!</h1>
-<Modal></Modal>
-</Layout> */}
-

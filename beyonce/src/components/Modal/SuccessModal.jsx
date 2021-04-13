@@ -1,14 +1,15 @@
 import React from "react";
 import Button from "../Button/Button";
+import ConfettiBG from './ConfettiBG';
 /**
  *
  * @param {string} title - text header
- * @param {?} description - content
+ * @param {?} description - content - could be video ... 
  * @param {string} buttonText - text to display in button
  * @param {func} handleAction - function to invoke on button click
  */
 
-const Modal = ({ title, buttonText, handleAction,children }) => {
+const SuccessModal = ({ title, buttonText, handleAction,children }) => {
   return (
     <div
       class="fixed z-10 inset-0 overflow-y-auto"
@@ -20,7 +21,7 @@ const Modal = ({ title, buttonText, handleAction,children }) => {
         <div
           class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
           aria-hidden="true"
-        ></div>
+        ><ConfettiBG></ConfettiBG></div>
         {/* this span is important to centering vertically*/}
         <span
           class="hidden sm:inline-block sm:align-middle sm:h-screen"
@@ -55,4 +56,4 @@ const Modal = ({ title, buttonText, handleAction,children }) => {
   );
 };
 
-export default Modal;
+export default SuccessModal;
