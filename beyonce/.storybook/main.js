@@ -8,7 +8,6 @@ module.exports = {
     "@storybook/preset-create-react-app",
   ],
   webpackFinal: async (config) => {
-
     //Configure PostCSS and Tailwind
     config.module.rules.push({
       test: /\,css&/,

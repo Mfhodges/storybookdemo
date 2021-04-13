@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as RemoveIcon } from '../../assests/remove.svg';
+//import RemoveIcon from '../../assests/remove.svg';
 
 /**
  * Functional Component to display Tailwind Badge
@@ -26,7 +27,7 @@ const Badge = ({
           onClick={onRemove}
           className={`inline-flex cursor-pointer items-center align-middle justify-center w-4 h-4 ml-1 rounded-full text-${color}-400 hover:bg-${color}-200 hover:text-${color}-500`}
         >
-          <RemoveIcon />
+         <RemoveIcon />
         </span>
       )}
     </button>
