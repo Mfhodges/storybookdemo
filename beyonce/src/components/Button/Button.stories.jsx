@@ -4,6 +4,13 @@ import Button from './Button';
 export default {
   title: 'Design System/Atoms/Button',
   component: Button,
+  argTypes:{
+    isFullWidth:{
+      table:{
+        disable:true
+      }
+    }
+  }
 };
 
 const Template = ({text, ...args}) => {
