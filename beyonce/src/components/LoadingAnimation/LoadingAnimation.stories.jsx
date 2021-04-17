@@ -6,15 +6,15 @@ export default {
   component: LoadingAnimation,
 };
 
-const Template = ({ ...args }) => {
+const Template = () => {
+  /* Markup to center the animation */
   return (
     <div class="flex h-screen">
       <div class="m-auto">
-        <LoadingAnimation {...args}></LoadingAnimation>
+        <LoadingAnimation ></LoadingAnimation>
       </div>
     </div>
   );
 };
 
 export const Primary = Template.bind({});
-Primary.args = {};
