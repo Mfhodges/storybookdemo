@@ -3,15 +3,15 @@ import React, { useState } from "react";
 import { ReactComponent as BellIcon } from '../../assests/bell.svg';
 
 
-const Layout = ({children}) => {
+const Layout = ({children, isFullWidth=false}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  const containerStyling =  isFullWidth ? "" : "max-w-7xl mx-auto py-8 sm:px-6 lg:px-8";
   return (
-    <div className="bg-gray-100 h-screen">
+    <div className="h-screen">
       <nav className="bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -267,8 +267,8 @@ const Layout = ({children}) => {
         </div>
       </nav>
 
-      <main>
-        <div className="max-w-7xl mx-auto py-8 sm:px-6 lg:px-8">
+      <main className="bg-gray-100">
+        <div className={`${containerStyling}`}>
           <div className="px-4 py-7 sm:px-0">{children}</div>
         </div>
       </main>
