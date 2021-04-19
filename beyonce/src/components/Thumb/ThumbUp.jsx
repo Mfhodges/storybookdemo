@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { ReactComponent as ThumbUpIcon } from "../../assests/thumbUp.svg";
 import { ReactComponent as ThumbUpIconSmall } from "../../assests/thumbUpSmall.svg";
 
-
 /**
  *
  * @param {bool} isSelected - determines styling (icon color) of component
@@ -10,7 +9,7 @@ import { ReactComponent as ThumbUpIconSmall } from "../../assests/thumbUpSmall.s
  * @param {func} handleSelection - function to handle selecting/unselecting job
  * @returns
  */
-const ThumbUp = ({ isSelected = false, isSmall = true, handleSelection }) => {
+const ThumbUp = ({ isSelected = false, isSmall = false, handleSelection }) => {
   const [isActive, setIsActive] = useState(isSelected);
   const handleClick = () => {
     console.log("clicking Icon");
@@ -25,8 +24,11 @@ const ThumbUp = ({ isSelected = false, isSmall = true, handleSelection }) => {
       className={`hover:bg-purple-100 ${sizeBG} flex justify-center items-center rounded-full ${iconColor}`}
       onClick={handleClick}
     >
-    { isSmall ?  <ThumbUpIconSmall className="pb-px mb-px" /> : <ThumbUpIcon className="pb-0.5" /> }
-   
+      {isSmall ? (
+        <ThumbUpIconSmall className="pb-px mb-px cursor-pointer" />
+      ) : (
+        <ThumbUpIcon className="pb-0.5 cursor-pointer" />
+      )}
     </div>
   );
 };

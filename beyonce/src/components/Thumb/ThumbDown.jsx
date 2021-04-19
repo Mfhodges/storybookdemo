@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { ReactComponent as ThumbDownIcon } from "../../assests/thumbDown.svg";
 import { ReactComponent as ThumbDownIconSmall } from "../../assests/thumbDownSmall.svg";
 
-
 /**
  *
  * @param {bool} isSelected - determines styling (icon color) of component
@@ -10,7 +9,11 @@ import { ReactComponent as ThumbDownIconSmall } from "../../assests/thumbDownSma
  * @param {func} handleSelection - function to handle selecting/unselecting job
  * @returns
  */
-const ThumbDown = ({ isSelected = false, isSmall = true, handleSelection }) => {
+const ThumbDown = ({
+  isSelected = false,
+  isSmall = false,
+  handleSelection,
+}) => {
   const [isActive, setIsActive] = useState(isSelected);
   const handleClick = () => {
     console.log("clicking Icon");
@@ -25,8 +28,11 @@ const ThumbDown = ({ isSelected = false, isSmall = true, handleSelection }) => {
       className={`hover:bg-purple-100 ${sizeBG} flex justify-center items-center rounded-full ${iconColor}`}
       onClick={handleClick}
     >
-    { isSmall ?  <ThumbDownIconSmall className="pt-px mt-px" /> : <ThumbDownIcon className="pt-0.5" /> }
-   
+      {isSmall ? (
+        <ThumbDownIconSmall className="pt-px mt-px cursor-pointer" />
+      ) : (
+        <ThumbDownIcon className="pt-0.5 cursor-pointer" />
+      )}
     </div>
   );
 };
