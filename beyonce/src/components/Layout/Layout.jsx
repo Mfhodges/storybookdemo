@@ -269,7 +269,7 @@ const Layout = ({children, isFullWidth=false}) => {
 
       <main className="bg-gray-100">
         <div className={`${containerStyling}`}>
-          <div className="px-4 py-7 sm:px-0">{children}</div>
+          <div className=" pt-7 px-0">{children}</div>
         </div>
       </main>
     </div>
